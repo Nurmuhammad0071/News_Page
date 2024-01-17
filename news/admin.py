@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import User, News
+from .models import User, New
 
 
-@admin.register(News)
+@admin.register(New)
 class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'text', 'status')
     list_filter = ('status', 'created')
