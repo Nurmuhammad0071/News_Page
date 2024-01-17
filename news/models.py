@@ -7,6 +7,9 @@ class User(models.Model):
     eamil = models.EmailField(max_length=250)
     age = models.IntegerField()
 
+    def __str__(self):
+        return self.first_name
+
 
 class News(models.Model):
     tite = models.CharField(max_length=250)
@@ -22,7 +25,7 @@ class New(models.Model):
     )
     title = models.CharField(max_length=250)
     text = models.TextField()
-    # user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='news')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='news')
     status = models.CharField(max_length=10, choices=STATUS)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
