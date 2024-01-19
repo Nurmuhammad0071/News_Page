@@ -38,8 +38,9 @@
                                            href=""></a>
                                         <a class="text-body" href=""><small>{{ i.created}}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="">
-                                        {{ i.title}}</a>
+                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
+                                       href="{% url 'show' id=i.id %}">
+                                        {{ i.title|truncatechars:25}}</a>
                                     <p class="m-0">{{ i.text|truncatechars:180 }}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
@@ -47,7 +48,7 @@
                                         <img class="rounded-circle mr-2" src="../../../static/teamp/img/user.jpg"
                                              width="25"
                                              height="25" alt="">
-                                        <small>John Doe</small>
+                                        <small>{{ i.user}}</small>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>

@@ -11,13 +11,6 @@ class User(models.Model):
         return self.first_name
 
 
-class News(models.Model):
-    tite = models.CharField(max_length=250)
-    img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
-    data = models.DateField()
-    text = models.TextField()
-
-
 class New(models.Model):
     STATUS = (
         ('active', "Active"),

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, New , News
+from .models import User, New
 
 
 @admin.register(New)
@@ -10,4 +10,3 @@ class NewAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(User)
-admin.site.register(News)
